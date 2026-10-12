@@ -1,0 +1,105 @@
+
+def add(a,b):
+    return a+b
+def subtract(a,b):
+    return a-b
+def multiply(a,b):
+    return a*b
+def divide(a,b):
+    if b==0:
+        return"ERROR : Division by zero!"
+    return a/b
+def checking_even_odd(n):
+    if n%2==0:
+        return "EVEN"
+    return "odd"
+def cal_percentage(part,whole):
+    if(whole==0):
+        return"ERROR : Division by zero!"
+    return (part/whole)*100
+
+while True:
+    print("\n\n")
+    print("\t......................          CALCULATOR          ............................\t")
+    print("\n\n")
+    print("WHICH OPERATION DO YOU WANT TO BE PERFORMED")
+    print("\n\n")
+    print("ENTER 1 FOR ADDITION\n\n")
+    print("ENTER 2 FOR SUBTRACTION\n\n")
+    print("ENTER 3 FOR MULTIPLICATION\n\n")
+    print("ENTER 4 FOR DIVISION\n\n")
+    print("ENTER 5 FOR CHECKING EVEN AND ODD NUMBER\n\n ")
+    print("ENTER 6 FOR CALCULATING PERCENTAGE\n\n ")
+    print("ENTER 7 FOR EXITING THE PROGRAM\n\n ")
+
+    choice=input("ENTER CHOICE(1-7)")
+
+    if choice == "7":
+        print(".................EXITING PROGRAM.................")
+        break
+
+    if choice in["1","2","3","4"]:
+        print("ENTER TWO NUMBERS ON WHICH YOU WANT OPERATIONS")
+        a=float(input("ENTER FIRST NUMBER : "))
+        b=float(input("ENTER SECOND NUMBER : "))
+
+        if choice == "1":
+            print("\n\n")
+            print(".................ADDITION OF TWO NUMBERS.................")
+            print("\n\n")
+            print (f"{a}+{b} = ",add(a,b))
+            print("\n\n")
+            print("\t\t..........................................................\t\t")
+
+        elif choice == "2":
+            print("\n\n")
+            print(".................SUBTRACTION OF TWO NUMBERS.................")
+            print("\n\n")
+            print (f"{a}-{b} = ",subtract(a,b))
+            print("\n\n")
+            print("\t\t..........................................................\t\t")
+
+        elif choice == "3":
+            print("\n\n")
+            print(".................MULTIPLICATION OF TWO NUMBERS.................")
+            print("\n\n")
+            print (f"{a}*{b} = ",multiply(a,b))
+            print("\n\n")
+            print("\t\t..........................................................\t\t")
+
+        elif choice == "4":
+            print("\n\n")
+            print(".................DIVISION OF TWO NUMBERS.................")
+            print("\n\n")
+            print (f"{a}/{b} = ",divide(a,b))
+            print("\n\n")
+            print("\t\t..........................................................\t\t")
+
+    elif choice == "5":
+        print("\n\n")
+        print(".................CHECKING NUMBERS AS EVEN OR ODD.................")
+        print("\n\n")
+        n=int(input("ENTER A NUMBER TO CHECK EVEN OR ODD"))
+        print(f"{n} is ",checking_even_odd(n))
+        print("\n\n")
+        print("\t\t..........................................................\t\t")
+
+    elif choice == "6":
+        print("\n\n")
+        print(".................CALCULATING PERCENTAGE OF NUMBER FROM ANOTHER NUMBER.................")
+        print("\n\n")
+        part=float(input("ENTER PART VALUE : "))
+        whole=float(input("ENTER WHOLE/TOTAL NUMBER : "))
+        result=cal_percentage(part,whole)
+
+        if isinstance(result,str):
+            print(result)
+        else:
+            print(f"PERCENTAGE = {result:.2f}%")
+
+        print("\n\n")
+        print("\t\t..........................................................\t\t")
+
+    else:
+        print("INVALID CHOICE! CHOOSE NUMBER BETWEEN LIMIT")
+        print("\t\t..........................................................\t\t")
