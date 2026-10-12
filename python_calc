@@ -19,6 +19,7 @@ def cal_percentage(part,whole):
     return (part/whole)*100
 
 while True:
+    print("................IT IS MY FIRST EVER PROGRAM ON GITHUB................")
     print("\n\n")
     print("\t......................          CALCULATOR          ............................\t")
     print("\n\n")
